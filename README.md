@@ -4,7 +4,7 @@
 
 This repository contains the Axion 1.0 research homepage and paper figures.
 
-**[View the project homepage](https://axion-1-research.youngrain34.chatgpt.site)**
+**[View the project homepage](https://axion1-0.github.io/)**
 
 ## Contents
 
