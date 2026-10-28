@@ -12,7 +12,7 @@ This repository contains the Axion 1.0 research homepage and paper figures.
 - `style.css` — desktop and mobile layouts.
 - `app.js` — linked benchmark comparisons, training-stage curves, and interactive recipe.
 - `assets/` — homepage logo and paper figures.
-- `figures/` — original figures already in this repository.
+- `figures/` — figures and the overall-results table from the current manuscript.
 - `paper/` — location for the manuscript PDF.
 
 ## Local preview
@@ -35,8 +35,14 @@ GitHub Pages publishes the `main` branch at the homepage URL above.
 
 ## Paper figures
 
-![](figures/figure1.png)
+### Figure 1 · Benchmark comparison
 
-![](figures/figure2.png)
+![Axion 1.0 benchmark comparison](figures/figure1.png)
 
-![](figures/table1.png)
+### Figure 2 · Data construction pipeline
+
+![Two-stage data construction pipeline](figures/figure2.png)
+
+### Table 1 · Overall performance
+
+![Overall performance from the current manuscript](figures/table1.png)
