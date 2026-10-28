@@ -27,11 +27,11 @@ Then open `http://localhost:8000`.
 
 ## Paper and dataset links
 
-The Paper and Hugging Face Dataset entries are marked **Coming soon** until their final files or URLs are available.
+The Paper button links to [the manuscript PDF](https://axion1-0.github.io/paper/axion.pdf). The Hugging Face Dataset entry remains **Coming soon**.
 
-To host a PDF in this repository, add it as `paper/axion.pdf`. The homepage's Paper entry can then link to that file, or to its GitHub URL. Once arXiv is available, replace the Paper URL with the arXiv link.
+The manuscript is hosted at `paper/axion.pdf`. Once arXiv is available, the Paper button can point to its arXiv page.
 
-The existing live homepage stays at the URL above. This repository stores the portable website source; a GitHub push does not automatically update the Sites-hosted page.
+GitHub Pages publishes the `main` branch at the homepage URL above.
 
 ## Paper figures
 
