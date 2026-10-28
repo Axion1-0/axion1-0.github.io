@@ -10,7 +10,7 @@ Axion 1.0 develops scientific reasoning and tool use through a simple training r
 
 ## Training recipe
 
-![Two-stage data construction pipeline](figures/figure2.png)
+![Two-stage data construction pipeline](assets/web_overview.svg)
 
 ## Benchmark results
 
