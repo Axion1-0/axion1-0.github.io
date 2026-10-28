@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="186 301 882 647" width="882" height="647">
+<title>Axion 1.0</title>
+<defs>
+<linearGradient id="gIcon" gradientUnits="userSpaceOnUse" x1="211.61" y1="-66.72" x2="555.37" y2="-175.11"><stop offset="0%" stop-color="#06255a"/><stop offset="20%" stop-color="#043980"/><stop offset="40%" stop-color="#024e9d"/><stop offset="60%" stop-color="#0071f1"/><stop offset="80%" stop-color="#009bfb"/><stop offset="100%" stop-color="#01cafc"/></linearGradient>
+<linearGradient id="gVer" gradientUnits="userSpaceOnUse" x1="818" y1="818" x2="940" y2="940"><stop offset="0%" stop-color="#04c1fc"/><stop offset="50%" stop-color="#0395fc"/><stop offset="100%" stop-color="#0385fc"/></linearGradient>
+</defs>
+
+<g id="icon" fill="url(#gIcon)"><path d="M471.9 640.6 L578.55 455.88 A68.4 68.4 0 0 0 608.34 473.08 L501.7 657.8 Z"/><path d="M751.4 657.8 L644.76 473.08 A68.4 68.4 0 0 0 674.55 455.88 L781.2 640.6 Z"/><path d="M547.72 632 L705.38 632 A63.3 63.3 0 0 0 705.38 666.4 L547.72 666.4 A63.3 63.3 0 0 0 547.72 632 Z"/><circle cx="626.55" cy="407.15" r="55.4"/><circle cx="486.8" cy="649.2" r="50.3"/><circle cx="766.3" cy="649.2" r="50.3"/></g>
+<g id="wordmark" fill="#0a224a"><path d="M301.79 758.06 L330.61 758.06 L396.27 894.7 L366.7 894.7 L316.2 787.79 L265.7 894.7 L236.13 894.7 Z"/><path d="M403.25 793.44 L432.45 793.44 L456.6 824.99 L480.75 793.44 L509.95 793.44 L471.2 844.07 L509.95 894.7 L480.75 894.7 L456.6 863.15 L432.45 894.7 L403.25 894.7 L442 844.07 Z"/><rect x="530.92" y="793.44" width="24.48" height="101.26"/><circle cx="543.16" cy="766.13" r="13.45"/><path fill-rule="evenodd" d="M572 843.8 A55.9 53.2 0 1 1 683.8 843.8 A55.9 53.2 0 1 1 572 843.8 Z M597.45 843.8 A30.45 31.25 0 1 0 658.35 843.8 A30.45 31.25 0 1 0 597.45 843.8 Z"/><path d="M698.56 793.44 L723.68 793.44 C735.69 792.01 735.47 790.69 749.56 790.69 C793.62 790.69 801.44 823.37 801.44 832 L801.44 894.7 L777.1 894.7 L777.1 838 C777.1 821.13 761.89 812.81 749.25 812.81 C741.76 812.81 731.29 815.66 723.68 817.19 L723.68 894.7 L698.56 894.7 Z"/></g>
+<g id="version" fill="url(#gVer)"><path d="M874.31 783.65 L858.28 783.65 L834.84 798.31 L839.24 812.93 L856.07 804.13 L856.07 894.7 L874.31 894.7 Z"/><circle cx="903.56" cy="884.48" r="11.1"/><path fill-rule="evenodd" d="M917.67 839.5 A49.73 57.91 0 1 1 1017.13 839.5 A49.73 57.91 0 1 1 917.67 839.5 Z M936.82 839.5 A30.58 42.12 0 1 0 997.98 839.5 A30.58 42.12 0 1 0 936.82 839.5 Z"/></g>
+</svg>
