@@ -1,48 +1,17 @@
-# Axion 1.0 — Project Page
+# Axion 1.0: Open Agent Foundation Models, Simplified
 
-**Open Agent Foundation Models, Simplified**
+[**Paper**](https://axion1-0.github.io/paper/axion.pdf) · [**Project Page**](https://axion1-0.github.io/)
 
-This repository contains the Axion 1.0 research homepage and paper figures.
+Axion 1.0 develops scientific reasoning and tool use through a simple training recipe: two lightweight supervised fine-tuning stages followed by reinforcement learning. Our 35B and 122B models achieve competitive performance across six challenging reasoning and agentic benchmarks.
 
-**[View the project homepage](https://axion1-0.github.io/)**
+## Results
 
-## Contents
+![Performance comparison across six benchmarks](figures/figure1.png)
 
-- `index.html` — homepage content and resource buttons.
-- `style.css` — desktop and mobile layouts.
-- `app.js` — linked benchmark comparisons, training-stage curves, and interactive recipe.
-- `assets/` — homepage logo and paper figures.
-- `figures/` — figures and the overall-results table from the current manuscript.
-- `paper/` — location for the manuscript PDF.
-
-## Local preview
-
-No build step or package installation is required. From this directory, run:
-
-```bash
-python3 -m http.server 8000
-```
-
-Then open `http://localhost:8000`.
-
-## Paper and dataset links
-
-The Paper button links to [the manuscript PDF](https://axion1-0.github.io/paper/axion.pdf). The Hugging Face Dataset entry remains **Coming soon**.
-
-The manuscript is hosted at `paper/axion.pdf`. Once arXiv is available, the Paper button can point to its arXiv page.
-
-GitHub Pages publishes the `main` branch at the homepage URL above.
-
-## Paper figures
-
-### Figure 1 · Benchmark comparison
-
-![Axion 1.0 benchmark comparison](figures/figure1.png)
-
-### Figure 2 · Data construction pipeline
+## Training recipe
 
 ![Two-stage data construction pipeline](figures/figure2.png)
 
-### Table 1 · Overall performance
+## Benchmark results
 
-![Overall performance from the current manuscript](figures/table1.png)
+![Overall performance from the paper](figures/table1.png)
