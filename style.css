@@ -61,7 +61,7 @@ header{padding-top:12px;padding-bottom:12px}
 .contents-toggle svg{fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
 .contents-toggle:hover{color:var(--blue);border-color:#a5b8df;background:var(--pale)}
 .contents-toggle:focus-visible{outline:2px solid var(--blue);outline-offset:3px}
-.reading-layout.contents-collapsed{grid-template-columns:40px minmax(0,1fr);gap:25px}
+.reading-layout.contents-collapsed{grid-template-columns:40px minmax(0,1000px) 40px;justify-content:center;gap:25px}
 .contents-collapsed .contents-toggle{padding:8px 10px}
 .contents-collapsed .contents-toggle svg{transform:rotate(180deg)}
 @media(max-width:750px){
