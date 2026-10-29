@@ -61,7 +61,6 @@ header{padding-top:12px;padding-bottom:12px}
 .contents-toggle svg{fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
 .contents-toggle:hover{color:var(--blue);border-color:#a5b8df;background:var(--pale)}
 .contents-toggle:focus-visible{outline:2px solid var(--blue);outline-offset:3px}
-.reading-layout.contents-collapsed{grid-template-columns:40px minmax(0,900px) 40px;justify-content:center;gap:25px}
 .contents-collapsed .contents-toggle{padding:8px 10px}
 .contents-collapsed .contents-toggle svg{transform:rotate(180deg)}
 @media(max-width:750px){
@@ -74,4 +73,19 @@ header{padding-top:12px;padding-bottom:12px}
 }
 
 /* The article is centered as a column; its text retains left alignment. */
-.reading-layout.contents-collapsed .story>section>p{max-width:none}
+.reading-layout .story>section>p{max-width:none}
+
+/* Reserve matching gutters so the article stays centered in both states. */
+@media(min-width:1101px){
+ .reading-layout,.reading-layout.contents-collapsed{grid-template-columns:160px minmax(0,900px) 160px;justify-content:center;gap:30px}
+ .reading-layout>.story{grid-column:2}
+ .reading-layout>aside{grid-column:1;grid-row:1}
+}
+@media(min-width:751px) and (max-width:1100px){
+ .reading-layout,.reading-layout.contents-collapsed{display:block;max-width:1040px}
+ .reading-layout>aside{position:static;padding-top:28px;gap:16px}
+ #page-contents{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px 20px;padding:18px 0;border-bottom:1px solid var(--line)}
+ #page-contents[hidden]{display:none}
+ #page-contents .eyebrow{grid-column:1/-1;margin-bottom:4px}
+ #page-contents .aside-note{display:none}
+}
