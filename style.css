@@ -77,7 +77,7 @@ header{padding-top:12px;padding-bottom:12px}
 
 /* Reserve matching gutters so the article stays centered in both states. */
 @media(min-width:1101px){
- .reading-layout,.reading-layout.contents-collapsed{grid-template-columns:160px minmax(0,900px) 160px;justify-content:center;gap:30px}
+ .reading-layout,.reading-layout.contents-collapsed{grid-template-columns:160px minmax(0,760px) 160px;justify-content:center;gap:30px;transition:grid-template-columns .4s cubic-bezier(.22,1,.36,1)}
  .reading-layout>.story{grid-column:2}
  .reading-layout>aside{grid-column:1;grid-row:1}
 }
@@ -88,4 +88,21 @@ header{padding-top:12px;padding-bottom:12px}
  #page-contents[hidden]{display:none}
  #page-contents .eyebrow{grid-column:1/-1;margin-bottom:4px}
  #page-contents .aside-note{display:none}
+}
+
+/* Animate the navigation and widen the centered article when it closes. */
+#page-contents{opacity:1;transform:translateX(0);visibility:visible;transition:opacity .22s ease,transform .3s ease,visibility 0s}
+.contents-collapsed #page-contents{opacity:0;transform:translateX(-14px);visibility:hidden;pointer-events:none;transition:opacity .2s ease,transform .3s ease,visibility 0s linear .3s}
+.contents-toggle svg{transition:transform .3s ease}
+@media(min-width:1101px){
+ .reading-layout.contents-collapsed{grid-template-columns:40px minmax(0,1000px) 40px}
+ .reading-layout>aside{min-width:0}
+ #page-contents{width:160px}
+}
+@media(max-width:1100px){
+ #page-contents{max-height:240px;overflow:hidden;transition:opacity .22s ease,transform .3s ease,max-height .35s ease,padding .35s ease,border-width .35s ease,visibility 0s}
+ .contents-collapsed #page-contents{max-height:0;padding-top:0;padding-bottom:0;border-width:0;transition:opacity .2s ease,transform .3s ease,max-height .35s ease,padding .35s ease,border-width .35s ease,visibility 0s linear .35s}
+}
+@media(prefers-reduced-motion:reduce){
+ .reading-layout,.contents-toggle svg,#page-contents,.contents-collapsed #page-contents{transition:none!important}
 }

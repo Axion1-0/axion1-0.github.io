@@ -70,7 +70,8 @@ const contentsToggle=document.getElementById('contents-toggle');
 const pageContents=document.getElementById('page-contents');
 function setContentsCollapsed(collapsed){
  readingLayout.classList.toggle('contents-collapsed',collapsed);
- pageContents.hidden=collapsed;
+ pageContents.inert=collapsed;
+ pageContents.setAttribute('aria-hidden',String(collapsed));
  contentsToggle.setAttribute('aria-expanded',String(!collapsed));
  contentsToggle.setAttribute('aria-label',collapsed?'Show contents':'Hide contents');
  contentsToggle.title=collapsed?'Show contents':'Hide contents';
