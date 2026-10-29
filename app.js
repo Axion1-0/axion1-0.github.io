@@ -50,3 +50,16 @@ const recipeStageDetails=[
 let activeRecipeStage=0;
 function selectRecipeStage(i){activeRecipeStage=i;const d=recipeStageDetails[i];document.querySelectorAll('[data-recipe-stage]').forEach(card=>{const selected=Number(card.dataset.recipeStage)===i;card.classList.toggle('recipe-selected',selected);card.setAttribute('aria-pressed',String(selected))});document.querySelector('#recipe-stage-detail').innerHTML=`<div class="recipe-detail-heading"><h3>${d.title}</h3><button type="button" id="view-recipe-progress">View this training stage ↓</button></div><p>${d.text}</p><div class="recipe-detail-flow"><div><small>INPUT</small><span>${d.input}</span></div><div><small>PROCESS</small><span>${d.process}</span></div><div><small>OUTCOME</small><span>${d.output}</span></div></div>`;document.querySelector('#view-recipe-progress').addEventListener('click',()=>{selectTrainingStage(d.stage);trainingRoot.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'center'})})}
 document.querySelectorAll('[data-recipe-stage]').forEach(card=>{const choose=()=>selectRecipeStage(Number(card.dataset.recipeStage));card.addEventListener('pointerenter',e=>{if(e.pointerType==='mouse')choose()});card.addEventListener('focus',choose);card.addEventListener('click',choose);card.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();choose()}if(e.key==='ArrowRight'||e.key==='ArrowLeft'){e.preventDefault();const next=(activeRecipeStage+(e.key==='ArrowRight'?1:2))%3;document.querySelector(`[data-recipe-stage="${next}"]`).focus()}})});selectRecipeStage(0);
+
+// Only count visits to the published project site, not localhost previews.
+const visitorMapMount = document.getElementById('visitor-map-mount');
+if (visitorMapMount) {
+  if (window.location.hostname === 'axion1-0.github.io') {
+    const widget = document.createElement('script');
+    widget.id = 'mapmyvisitors';
+    widget.src = visitorMapMount.dataset.src;
+    visitorMapMount.replaceWith(widget);
+  } else {
+    visitorMapMount.closest('.visitor-panel')?.remove();
+  }
+}
