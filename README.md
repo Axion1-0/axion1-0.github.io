@@ -15,3 +15,7 @@ Axion 1.0 develops scientific reasoning and tool use through a simple training r
 ## Benchmark results
 
 ![Overall performance from the paper](figures/table1.png)
+
+## Star History
+
+[![Star History](assets/star-history.svg)](https://github.com/Axion1-0/axion1-0.github.io/stargazers)
