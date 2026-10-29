@@ -47,4 +47,9 @@ header{padding-top:12px;padding-bottom:12px}
 
 
 
-.visitor-map{max-width:204px;margin:32px auto 0;padding:0 12px}.visitor-map img{display:block;width:100%;height:auto}
+
+.visitor-panel{width:min(280px,calc(100% - 40px));margin:32px auto 0;padding:10px;border:1px solid var(--line);border-radius:8px;background:#f4f6f2;display:grid;gap:8px;justify-items:center}
+.visitor-title{font-size:11px;font-weight:600;color:var(--muted)}
+.visitor-embed{width:100%;min-width:0;text-align:center;border-radius:4px;overflow:hidden}
+.visitor-embed img{max-width:100%;height:auto}
+
