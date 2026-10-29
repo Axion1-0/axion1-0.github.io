@@ -41,3 +41,6 @@ header{padding-top:12px;padding-bottom:12px}
 .hero-tagline{font-family:Manrope,sans-serif;font-size:clamp(26px,3.4vw,42px);font-weight:600;line-height:1.25;letter-spacing:-.045em;color:var(--ink);max-width:none;margin:0 auto 28px}
 .hero-tagline em{font-family:Georgia,serif;font-weight:400;color:var(--blue)}
 @media(max-width:750px){.hero-tagline{font-size:clamp(23px,5.8vw,34px);margin-bottom:24px}.hero-grid h1{margin-bottom:14px}}
+
+.hero-bottom div:first-of-type{border-left:0}
+@media(max-width:750px){.hero-bottom{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:20px}.hero-bottom div:nth-of-type(odd){border-left:0}}
