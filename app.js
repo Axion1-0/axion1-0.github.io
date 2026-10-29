@@ -63,3 +63,23 @@ if (visitorMapMount) {
     visitorMapMount.closest('.visitor-panel')?.remove();
   }
 }
+
+// Keep the contents toggle available and remember the reader's preference.
+const readingLayout=document.querySelector('.reading-layout');
+const contentsToggle=document.getElementById('contents-toggle');
+const pageContents=document.getElementById('page-contents');
+function setContentsCollapsed(collapsed){
+ readingLayout.classList.toggle('contents-collapsed',collapsed);
+ pageContents.hidden=collapsed;
+ contentsToggle.setAttribute('aria-expanded',String(!collapsed));
+ contentsToggle.setAttribute('aria-label',collapsed?'Show contents':'Hide contents');
+ contentsToggle.title=collapsed?'Show contents':'Hide contents';
+}
+let savedContentsPreference=null;
+try{savedContentsPreference=localStorage.getItem('axion-contents-collapsed')}catch{}
+setContentsCollapsed(savedContentsPreference===null?matchMedia('(max-width:750px)').matches:savedContentsPreference==='true');
+contentsToggle.addEventListener('click',()=>{
+ const collapsed=!readingLayout.classList.contains('contents-collapsed');
+ setContentsCollapsed(collapsed);
+ try{localStorage.setItem('axion-contents-collapsed',String(collapsed))}catch{}
+});

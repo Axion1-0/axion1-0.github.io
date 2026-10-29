@@ -53,3 +53,22 @@ header{padding-top:12px;padding-bottom:12px}
 .visitor-embed{width:100%;min-width:0;text-align:center;border-radius:4px;overflow:hidden}
 .visitor-embed img{max-width:100%;height:auto}
 
+
+/* Collapsible page contents keep the control available when navigation is hidden. */
+#page-contents{display:flex;flex-direction:column;gap:15px}
+#page-contents[hidden]{display:none}
+.contents-toggle{display:inline-flex;align-items:center;gap:8px;align-self:flex-start;padding:8px 10px;border:1px solid var(--line);border-radius:5px;background:transparent;color:var(--muted);font-size:11px;line-height:1.4;cursor:pointer;white-space:nowrap}
+.contents-toggle svg{fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
+.contents-toggle:hover{color:var(--blue);border-color:#a5b8df;background:var(--pale)}
+.contents-toggle:focus-visible{outline:2px solid var(--blue);outline-offset:3px}
+.reading-layout.contents-collapsed{grid-template-columns:40px minmax(0,1fr);gap:25px}
+.contents-collapsed .contents-toggle{padding:8px 10px}
+.contents-collapsed .contents-toggle svg{transform:rotate(180deg)}
+@media(max-width:750px){
+ .reading-layout>aside{display:flex;position:static;padding-top:28px;gap:16px}
+ .reading-layout.contents-collapsed{display:block}
+ #page-contents{display:grid;grid-template-columns:1fr 1fr;column-gap:20px;row-gap:10px;padding:18px 0;border-bottom:1px solid var(--line)}
+ #page-contents[hidden]{display:none}
+ #page-contents .eyebrow{grid-column:1/-1;margin-bottom:4px}
+ #page-contents .aside-note{display:none}
+}
