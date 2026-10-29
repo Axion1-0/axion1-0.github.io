@@ -44,3 +44,5 @@ header{padding-top:12px;padding-bottom:12px}
 
 .hero-bottom div:first-of-type{border-left:0}
 @media(max-width:750px){.hero-bottom{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:20px}.hero-bottom div:nth-of-type(odd){border-left:0}}
+
+.hero-cost-note{max-width:none;margin:14px 0 0;text-align:center;color:var(--muted);font-size:10px;line-height:1.65}
