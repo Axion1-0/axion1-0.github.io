@@ -16,6 +16,8 @@ Axion 1.0 develops scientific reasoning and tool use through a simple training r
 
 ![Overall performance from the paper](figures/table1.png)
 
+<!-- Star History is hidden for now; the daily chart update remains enabled.
 ## Star History
 
 [![Star History](https://raw.githubusercontent.com/Axion1-0/axion1-0.github.io/main/assets/star-history.svg)](https://github.com/Axion1-0/axion1-0.github.io/stargazers)
+-->
