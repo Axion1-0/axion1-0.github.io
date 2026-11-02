@@ -106,3 +106,9 @@ header{padding-top:12px;padding-bottom:12px}
 @media(prefers-reduced-motion:reduce){
  .reading-layout,.contents-toggle svg,#page-contents,.contents-collapsed #page-contents{transition:none!important}
 }
+
+
+/* Available resources: blue outline, filled on hover or keyboard focus. */
+.actions a.button{background:#fff;color:var(--blue);border-color:var(--blue);transition:transform .2s,background .2s,color .2s,border-color .2s}
+.actions a.button:hover,.actions a.button:focus-visible{background:var(--blue);color:#fff}
+.actions a.button:focus-visible{outline:2px solid var(--blue);outline-offset:3px}
