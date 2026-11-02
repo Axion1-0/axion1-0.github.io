@@ -112,3 +112,7 @@ header{padding-top:12px;padding-bottom:12px}
 .actions a.button{background:#fff;color:var(--blue);border-color:var(--blue);transition:transform .2s,background .2s,color .2s,border-color .2s}
 .actions a.button:hover,.actions a.button:focus-visible{background:var(--blue);color:#fff}
 .actions a.button:focus-visible{outline:2px solid var(--blue);outline-offset:3px}
+
+/* Match the widths of all four resource buttons. */
+.actions .button{width:180px;min-width:0}
+@media(max-width:750px){.actions .button{width:100%}}
