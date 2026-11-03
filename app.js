@@ -52,6 +52,10 @@ function selectRecipeStage(i){activeRecipeStage=i;const d=recipeStageDetails[i];
 document.querySelectorAll('[data-recipe-stage]').forEach(card=>{const choose=()=>selectRecipeStage(Number(card.dataset.recipeStage));card.addEventListener('pointerenter',e=>{if(e.pointerType==='mouse')choose()});card.addEventListener('focus',choose);card.addEventListener('click',choose);card.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();choose()}if(e.key==='ArrowRight'||e.key==='ArrowLeft'){e.preventDefault();const next=(activeRecipeStage+(e.key==='ArrowRight'?1:2))%3;document.querySelector(`[data-recipe-stage="${next}"]`).focus()}})});selectRecipeStage(0);
 
 // Only count visits to the published project site, not localhost previews.
+// The map shows where visitors come from; the counts come from our own worker,
+// which increments on every request and splits them by User-Agent.
+const VISIT_COUNTER = 'https://axion-counter.axion-counter.workers.dev/';
+
 const visitorMapMount = document.getElementById('visitor-map-mount');
 if (visitorMapMount) {
   if (window.location.hostname === 'axion1-0.github.io') {
@@ -62,6 +66,20 @@ if (visitorMapMount) {
   } else {
     visitorMapMount.closest('.visitor-panel')?.remove();
   }
+}
+
+const visitorTotal = document.getElementById('visitor-total');
+if (visitorTotal && window.location.hostname === 'axion1-0.github.io') {
+  fetch(VISIT_COUNTER)
+    .then(r => r.json())
+    .then(({ total, ai }) => {
+      visitorTotal.textContent = total.toLocaleString('en-US');
+      if (ai > 0) {
+        document.getElementById('visitor-ai').textContent =
+          ` · ${ai.toLocaleString('en-US')} from AI agents`;
+      }
+    })
+    .catch(() => { visitorTotal.textContent = '—'; });
 }
 
 // Keep the contents toggle available and remember the reader's preference.
