@@ -52,11 +52,6 @@ function selectRecipeStage(i){activeRecipeStage=i;const d=recipeStageDetails[i];
 document.querySelectorAll('[data-recipe-stage]').forEach(card=>{const choose=()=>selectRecipeStage(Number(card.dataset.recipeStage));card.addEventListener('pointerenter',e=>{if(e.pointerType==='mouse')choose()});card.addEventListener('focus',choose);card.addEventListener('click',choose);card.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();choose()}if(e.key==='ArrowRight'||e.key==='ArrowLeft'){e.preventDefault();const next=(activeRecipeStage+(e.key==='ArrowRight'?1:2))%3;document.querySelector(`[data-recipe-stage="${next}"]`).focus()}})});selectRecipeStage(0);
 
 // Only count visits to the published project site, not localhost previews.
-// The map renders locations; the running total comes from GoatCounter so the
-// figure keeps climbing from the count carried over on the switch-over day.
-const VISITOR_COUNT_SOURCE = 'https://axion.goatcounter.com/counter/TOTAL.json';
-const VISITOR_COUNT_BASELINE = 236;
-
 const visitorMapMount = document.getElementById('visitor-map-mount');
 if (visitorMapMount) {
   if (window.location.hostname === 'axion1-0.github.io') {
@@ -67,20 +62,6 @@ if (visitorMapMount) {
   } else {
     visitorMapMount.closest('.visitor-panel')?.remove();
   }
-}
-
-const visitorTotal = document.getElementById('visitor-total');
-if (visitorTotal) {
-  const show = n => { visitorTotal.textContent = n.toLocaleString('en-US'); };
-  show(VISITOR_COUNT_BASELINE);
-  fetch(VISITOR_COUNT_SOURCE)
-    .then(r => (r.ok ? r.json() : Promise.reject(r.status)))
-    .then(d => {
-      // The API returns a formatted string, e.g. "1 098 048".
-      const n = parseInt(String(d.count).replace(/\D/g, ''), 10);
-      if (Number.isFinite(n)) show(n + VISITOR_COUNT_BASELINE);
-    })
-    .catch(() => {});
 }
 
 // Keep the contents toggle available and remember the reader's preference.
