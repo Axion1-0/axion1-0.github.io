@@ -72,12 +72,8 @@ const visitorTotal = document.getElementById('visitor-total');
 if (visitorTotal && window.location.hostname === 'axion1-0.github.io') {
   fetch(VISIT_COUNTER)
     .then(r => r.json())
-    .then(({ total, ai }) => {
+    .then(({ total }) => {
       visitorTotal.textContent = total.toLocaleString('en-US');
-      if (ai > 0) {
-        document.getElementById('visitor-ai').textContent =
-          ` · ${ai.toLocaleString('en-US')} from AI agents`;
-      }
     })
     .catch(() => { visitorTotal.textContent = '—'; });
 }
