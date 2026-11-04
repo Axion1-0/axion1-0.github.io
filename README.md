@@ -1,6 +1,6 @@
 # Axion 1.0: Open Agent Foundation Models, Simplified
 
-[**Paper**](https://axion1-0.github.io/paper/axion.pdf) · [**Project Page**](https://axion1-0.github.io/)
+[**Paper**](https://axion1-0.github.io/paper/axion.pdf) · [**Project Page**](https://axion1-0.github.io/) · [**Model (35B Reproduction)**](https://huggingface.co/Axion1-0/Axion-1.0-35B)
 
 Axion 1.0 develops scientific reasoning and tool use through a simple training recipe: two lightweight supervised fine-tuning stages followed by reinforcement learning. Our 35B and 122B models achieve competitive performance across six challenging reasoning and agentic benchmarks.
 
