@@ -5,7 +5,7 @@ const modelNames={a122:'Axion 1.0-122B',a35:'Axion 1.0-35B',fable:'Claude Fable 
 const shortNames={a122:'Axion 1.0<br>122B',a35:'Axion 1.0<br>35B',fable:'Claude<br>Fable 5',opus:'Claude<br>Opus 5',muse:'Muse-<br>Spark-1.0',astra:'GPT-6<br>Astra',apoteam:'Apodex 1.1<br>Agent Team',aporen:'Apodex 1.1<br>ReAct',sol:'GPT-5.6<br>Sol',g55:'GPT-5.5',gemini:'Gemini<br>3.1 Pro',agents:'Agents-<br>A1',deep:'DeepSeek-V4<br>Pro Preview',kimi:'Kimi-<br>K2.6'};
 const chartData=[
  {name:'Humanity’s Last Exam',subtitle:'General reasoning and search',min:35,values:[['fable',63.8],['opus',63.6],['a122',59.0],['muse',58],['astra',57.2],['apoteam',56.1],['a35',52.2]]},
- {name:'BioMysteryBench',subtitle:'Scientific research / human-difficult',values:[['opus',49.4],['sol',47.1],['fable',46.1],['a122',41.7],['a35',35.3],['apoteam',35.3],['gemini',35.3]]},
+ {name:'BioMysteryBench',subtitle:'Scientific research / human-difficult',values:[['opus',49.4],['sol',47.1],['fable',46.1],['a122',41.2],['a35',35.3],['apoteam',35.3],['gemini',35.3]]},
  {name:'SEAL-0',subtitle:'Agentic problem solving',values:[['a35',62.2],['a122',58.6],['agents',56.4],['deep',55],['gemini',53.2],['sol',53.2],['kimi',50.5]]},
  {name:'HiPhO',subtitle:'Scientific reasoning',values:[['agents',46.4],['a122',46.2],['a35',45.7],['g55',43.3],['sol',42.9],['kimi',41.1],['deep',38.7]]},
  {name:'FrontierScience Olympiad',subtitle:'Scientific olympiad',values:[['a122',87],['a35',86],['gemini',85],['agents',79],['sol',79],['g55',78],['deep',76]]},
@@ -23,8 +23,8 @@ clearButton.addEventListener('click',()=>{pinnedModel=null;highlightModel(null)}
 // Scores transcribed from the manuscript's training-stage table.
 const stageBenchmarks=[
  {name:'HLE-130',note:'130-question text-only subset',a:[47.7,59.2,66.2,70.0],b:[40.8,68.5,68.5,74.6]},
- {name:'BioMysteryBench',note:'Human-difficult subset',a:[23.5,17.6,35.3,35.3],b:[17.6,29.4,35.3,41.7]},
- {name:'SEAL-0',note:'Information seeking',a:[44.1,50.5,53.2,62.2],b:[47.8,52.3,53.2,58.6]},
+ {name:'BioMysteryBench',note:'Human-difficult subset',a:[23.5,17.6,35.3,35.3],b:[17.6,29.4,35.3,41.2]},
+ {name:'SEAL-0',note:'Information seeking',a:[44.1,50.5,53.2,62.2],b:[47.7,52.3,53.2,58.6]},
  {name:'HiPhO',note:'Full benchmark',a:[38.6,45.9,46.8,45.7],b:[30.6,45.6,45.8,46.2]},
  {name:'FrontierScience Olympiad',note:'Olympiad split',a:[71.0,83.0,84.0,86.0],b:[65.0,85.0,86.0,87.0]},
  {name:'FrontierScience Research',note:'Research split',a:[26.7,48.3,58.3,56.7],b:[40.0,56.7,65.0,66.7]}
